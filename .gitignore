@@ -1,0 +1,26 @@
+node_modules/
+.DS_Store
+
+.cache
+.tox
+.tx
+
+# Docker
+.docker
+
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*/*.py[cod]
+*/*/*.py[cod]
+*/*/*/*.py[cod]
+
+.env/
+.venv/
+venv/
+
+db.sqlite3
+templates/dist/**
+!templates/dist/.gitkeep
