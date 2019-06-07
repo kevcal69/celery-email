@@ -22,5 +22,6 @@ __pycache__/
 venv/
 
 db.sqlite3
+celerybeat-schedule
 templates/dist/**
 !templates/dist/.gitkeep

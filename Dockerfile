@@ -16,7 +16,6 @@ COPY requirements.txt /app/
 RUN python -m pip install -r requirements.txt
 
 COPY package.json /app/
-RUN npm install
 
 ADD . /app/
 # RUN npm run build:prod

@@ -143,11 +143,11 @@ CELERY_RESULT_BACKEND = 'redis://redis:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = TIME_ZONE
+CELERY_TIMEZONE = 'Asia/Hong_Kong'
 
 
 CELERY_BEAT_SCHEDULE = {
-    'email-sender': {
+    'send-email': {
         'task': 'core.tasks.send_email',
         'schedule': crontab()  # execute every minute
     }

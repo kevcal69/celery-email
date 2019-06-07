@@ -5,7 +5,6 @@ from django.views.generic import View
 
 from core.forms import EmailQueeForms
 from core.models import EmailQueue
-from core.tasks import send_email
 
 
 class EmailView(View):
@@ -36,8 +35,7 @@ class EmailView(View):
     def post(self, request, *args, **kwargs):
         form = EmailQueeForms(request.POST or None)
         if form.is_valid():
-            instance = form.save()
-            send_email.apply_async(args=(instance.pk, ), countdown=2)
+            form.save()
             return HttpResponse('Success', status=200)
         else:
             return HttpResponse('error', status=404)
