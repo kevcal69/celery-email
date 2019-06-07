@@ -9,7 +9,7 @@ git clone -b v2-feature/send-email-beat https://github.com/kevcal69/celery-email
 ```
 
 Before doing compose you have to setup Mailgun API KEYS
-
+Edit web-variables.env file
 ```Bash
 # Example
 MAILGUN_API_URL=https://api.mailgun.net/v3/sandboxbacSomethingkeys.mailgun.org/messages
