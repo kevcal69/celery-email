@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:9.6.5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  redis:
+    image: "redis:alpine"
+  web:
+    build: .
+    entrypoint:
+      - ./entrypoint.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    env_file:
+      - web-variables.env
+    depends_on:
+      - db
+      - redis
+  celery:
+    build: .
+    command: celery -A appemail worker -l info
+    volumes:
+      - .:/code
+    env_file:
+      - web-variables.env
+    depends_on:
+      - web
+      - db
+      - redis
+volumes:
+  postgres_data:

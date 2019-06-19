@@ -1,0 +1,42 @@
+{
+  "name": "appemail",
+  "version": "1.0.0",
+  "description": "App that sends email ",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:watch",
+    "build:watch": "webpack --progress --watch",
+    "build:prod": "webpack --progress --config webpack.prod.js"
+  },
+  "author": "Kevin E. Calingacion",
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/colors": "^3.1.0",
+    "@ant-design/icons": "^1.1.16",
+    "@ant-design/icons-vue": "^1.0.1",
+    "ant-design-vue": "^1.3.9",
+    "axios": "^0.19.0",
+    "babel-cli": "^6.26.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-merge": "^4.2.1"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/kevcal69/celery-email.git"
+  }
+}
